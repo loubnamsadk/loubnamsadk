@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification</title>
+</head>
+<body>
+    <style>
+       input ,textarea{
+           width: 300px;
+           padding: 10px;
+           margin-bottom: 20px;
+           box-sizing: border-box;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           font-style: italic;
+         
+
+       }
+       label {
+           display: block;
+           margin-bottom: 10px;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           font-style: italic;
+         
+       }
+       button {
+           background-color: rosybrown;
+       }
+       h1,legend{
+           color:rosybrown
+       }
+   </style>
+        <legend><h1><ins>Contacter moi </ins></h1></legend>
+<br>
+<img src="T2.jpeg" width="500" height="200">
+    <label for="nomUtilisateur">Nom:</label>
+    <input type="text" id="nomUtilisateur">
+
+    <label for="motDePasse">Mot de passe:</label>
+    <input type="password" id="motDePasse">
+    <br>
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="5"  width="300" height="300"></textarea>
+    <br>
+
+    <button onclick="verifierAuthentification()">Envoyer</button>
+    <button type="reset">annuler</button>
+    
+    <script>
+        function verifierAuthentification() {
+            // Récupérer les valeurs du nom d'utilisateur et du mot de passe
+            var nomUtilisateur = document.getElementById("nomUtilisateur").value;
+            var motDePasse = document.getElementById("motDePasse").value;
+
+            // Vérifier les informations d'authentification
+            if (nomUtilisateur === "loubna" && motDePasse === "loubna") {
+                // Rediriger vers la nouvelle page en cas de succès
+                window.location.href = "cv2.html";
+            } else {
+                // Afficher un message d'erreur en cas d'échec
+                alert("Saisie incorrecte. Veuillez vérifier votre nom d'utilisateur et votre mot de passe.");
+            }
+        }
+    </script>
+    </fieldset>
+</body>
+</html>
